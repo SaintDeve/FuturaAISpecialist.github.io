@@ -11,11 +11,40 @@
             padding: 20px;
         }
 
+        header {
+            background-color: #333;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 4px;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+        }
+
+        .logo img {
+            width: 100%;
+            height: auto;
+        }
+
+        .titulo {
+            color: #fff;
+            font-size: 100%;
+            padding-left: 20%;
+        }
+
         h1 {
             color: #333;
         }
 
         p {
+            color: #666;
+        }
+
+        li {
             color: #666;
         }
 
@@ -36,7 +65,7 @@
         input[type="text"],
         input[type="number"],
         input[type="email"] {
-            width: 100%;
+            width: 75%;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
@@ -49,6 +78,7 @@
             padding: 10px 20px;
             border-radius: 4px;
             cursor: pointer;
+            
         }
 
         input[type="submit"]:hover {
@@ -56,9 +86,36 @@
         }
     </style>
 </head>
+
+
+
 <body>
-    <h1>¡Bienvenido al evento de IA!</h1>
+
+    <header>
+        <div class="logo">
+            <img src="Futura 1.png" alt="Logo del evento">
+        </div>
+        <div class="titulo">
+              AI Emprende: Innovación y Oportunidades
+        </div>
+    </header>
+
+    <h1>¡Descubre el futuro del emprendimiento con inteligencia artificial en AI Emprende: Innovación y Oportunidades!</h1>
+    <p>Durante este evento en línea de vanguardia, te llevaremos a un viaje fascinante a través de las posibilidades ilimitadas que la inteligencia artificial ofrece al mundo empresarial. A través de conferencias inspiradoras, talleres prácticos y paneles de discusión, te adentrarás en el fascinante mundo de la IA y su aplicación en el emprendimiento.</p>
+    <h1>¿Qué puedes esperar?</h1>
+    <ul>
+        <li>Conferencias virtuales de expertos destacados en inteligencia artificial y emprendimiento, quienes compartirán sus conocimientos y experiencias para impulsar tu visión emprendedora.</li>
+        <li>Acceso a descuentos de boleteria para conciertos.</li>
+        <li>Talleres interactivos en línea, dirigidos por profesionales destacados, donde aprenderás técnicas y herramientas para aplicar la IA en tu negocio y acelerar tu éxito emprendedor.</li>
+        <li>Paneles de discusión en los que expertos debatirán sobre las últimas tendencias y desafíos en el mundo de la IA y cómo puedes aprovechar estas oportunidades en tu emprendimiento.</li>
+        <li>Una plataforma de networking virtual que te permitirá conectarte con mentes brillantes de todo el mundo, establecer contactos estratégicos y descubrir nuevas oportunidades de colaboración.</li>
+        <li>Una exposición virtual de emprendimientos basados en IA, donde podrás explorar proyectos innovadores y encontrar inspiración para llevar tu emprendimiento al siguiente nivel.</li>
+    </ul>
+    
+    <h1>No pierdas la oportunidad de ser parte de la revolución emprendedora impulsada por la IA.</h1>
     <p>Estamos encantados de que quieras participar en nuestro evento sobre Inteligencia Artificial. Por favor, completa el siguiente formulario:</p>
+
+
 
     <form action="https://script.google.com/macros/s/AKfycbxGB3lij_45dQYQnWrTX8dWcEfZDhfn1gFBbGIEySZJ_szqoFJnwPERAK8OOVn1E0e74w/exec" method="POST">
 
@@ -71,7 +128,21 @@
         <label for="correo">E-Mail:</label>
         <input type="email" id="correo" name="correo" required><br><br>
 
-        <input type="submit" value="Enviar" onclick="location.href='Backpage.html'">
+        <input type="submit" value="Enviar" onclick="mostrarPaginaAgradecimiento()">
     </form>
+
+    <script>
+        function mostrarPaginaAgradecimiento() {
+            document.getElementById("formulario").style.display = "none";
+            document.getElementById("agradecimiento").style.display = "block";
+        }
+    </script>
+
+<div id="agradecimiento" style="display: none;">
+    <h1>¡Gracias por participar!</h1>
+    <p>Te agradecemos por tu participación en nuestro evento de IA. Hemos enviado un correo electrónico a la dirección proporcionada con más información sobre el evento.</p>
+    <button onclick="location.href='index.html'">Volver al inicio</button>
+</div>
+
 </body>
 </html>
